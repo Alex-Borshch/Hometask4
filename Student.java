@@ -2,10 +2,20 @@ public class Student extends Person {
 
 
     private String idNumber;
+    private String name;
     private double gpa;
-
+    private int course;
     public String getIdNumber() {
         return idNumber;
+    }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    public int getCourse() {
+        return course;
     }
 
     public double getGpa() {
@@ -25,6 +35,9 @@ public class Student extends Person {
         this.idNumber = idNumber;
         this.gpa = gpa;
     }
+
+
+
 
     public String toString() {
         return super.toString() + (", student id: " + idNumber + ", gpa: " + gpa);

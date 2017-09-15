@@ -1,3 +1,5 @@
+import java.io.FileNotFoundException;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -16,6 +18,15 @@ public class Main {
         for (Person p : persons) {
             System.out.println(p);
         }
+        System.out.println("______________________________________________________________________________");
+
+        Reader r = new Reader();
+        try {
+            r.readFile("Data.txt");
+        } catch (FileNotFoundException e) {
+            System.out.println("Cant read file");
+        }
+        System.out.println(new CollegeStudent(r.getName(), r.getAge(), r.getGender(), r.getIdNumber(), r.getGpa(), r.getYear(), r.getMajor()));
 
     }
 
